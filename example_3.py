@@ -1,4 +1,5 @@
-from ctypes import c_char, pointer
+from ctypes import c_char
+from ctypes import pointer
 
 st = pointer(c_char(b'A'))
 index = 0
