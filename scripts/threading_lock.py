@@ -1,6 +1,6 @@
 import time
-from threading import Thread
 from threading import Lock
+from threading import Thread
 
 
 class NumberThread(Thread):
@@ -14,7 +14,7 @@ class NumberThread(Thread):
         self.delay = delay
 
     def run(self):
-        for number in range(self.start_from, self.finish_with+1, self.step):
+        for number in range(self.start_from, self.finish_with + 1, self.step):
             with self.thread_lock:
                 print("%s: %s" % (self.name, number))
             time.sleep(self.delay)

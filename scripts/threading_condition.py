@@ -1,6 +1,6 @@
 import time
-from threading import Thread
 from threading import Condition
+from threading import Thread
 
 number = 0
 printed = False

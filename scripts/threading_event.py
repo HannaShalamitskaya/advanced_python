@@ -1,6 +1,6 @@
 import time
-from threading import Thread
 from threading import Event
+from threading import Thread
 
 
 def print_number(name, ev, start_from, count):
