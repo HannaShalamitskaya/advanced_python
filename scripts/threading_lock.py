@@ -1,6 +1,6 @@
-import time
 from threading import Lock
 from threading import Thread
+import time
 
 
 class NumberThread(Thread):

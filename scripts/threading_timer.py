@@ -1,5 +1,5 @@
-import time
 from threading import Timer
+import time
 
 
 def print_number(name, start_from, end_with, delay):

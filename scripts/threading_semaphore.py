@@ -1,6 +1,6 @@
-import time
 from threading import Semaphore
 from threading import Thread
+import time
 
 
 def number_writer(sem, name, n_from, n_to):
@@ -14,8 +14,10 @@ def number_writer(sem, name, n_from, n_to):
 if __name__ == "__main__":
     semaphore = Semaphore(1)
 
-    thread_odd = Thread(target=number_writer, args=(semaphore, "Odd ", 0, 101))
-    thread_even = Thread(target=number_writer, args=(semaphore, "Even", 1, 101))
+    thread_odd = Thread(target=number_writer,
+                        args=(semaphore, "Odd ", 0, 101))
+    thread_even = Thread(target=number_writer,
+                         args=(semaphore, "Even", 1, 101))
 
     thread_odd.start()
     time.sleep(0.05)
