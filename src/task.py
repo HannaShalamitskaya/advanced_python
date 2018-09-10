@@ -1,9 +1,9 @@
 from multiprocessing import freeze_support
 from multiprocessing import Lock
-import os
 from multiprocessing import Process
-import time
 from multiprocessing import Queue
+import os
+import time
 
 
 def generate_numbers(queue, count):
