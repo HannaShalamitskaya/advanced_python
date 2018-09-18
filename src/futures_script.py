@@ -1,6 +1,6 @@
 from concurrent.futures import ProcessPoolExecutor
-from multiprocessing import freeze_support
 from math import sqrt
+from multiprocessing import freeze_support
 from time import sleep
 
 
