@@ -26,7 +26,7 @@ if __name__ == '__main__':
         print("Please provide a number(s)")
     else:
         if n > m:
-            print(f"wrong values ({n} > {m}). Must be N < M")
+            print("wrong values (%s > %s). Must be N < M" % (n, m))
         else:
             prime_sum = 0
             for res in ProcessPoolExecutor(4).map(is_prime, range(n, m - 1)):
