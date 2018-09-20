@@ -18,6 +18,7 @@ if __name__ == '__main__':
     freeze_support()
     n = m = None
     print("Please provide borders (N and M) for the range")
+
     try:
         n = int(input("N ( > 0): "))
         m = int(input("M ( > N): "))
