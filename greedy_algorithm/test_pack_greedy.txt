@@ -1,0 +1,14 @@
+The ``src`` module
+======================
+
+Using ``pack_greedy``
+-------------------
+
+    >>> from greedy_algorithm.src import pack_greedy
+    >>> pack_greedy("items.csv")
+    [GreedyItem(name='map', weight=9, value=150, efficiency=16.666666666666668), GreedyItem(name='socks', weight=4, value=50, efficiency=12.5), GreedyItem(name='suntan cream', weight=11, value=70, efficiency=6.363636363636363), GreedyItem(name='glucose', weight=15, value=60, efficiency=4.0), GreedyItem(name='note-case', weight=22, value=80, efficiency=3.6363636363636362), GreedyItem(name='sandwich', weight=50, value=160, efficiency=3.2), GreedyItem(name='sunglasses', weight=7, value=20, efficiency=2.857142857142857), GreedyItem(name='compass', weight=13, value=35, efficiency=2.6923076923076925), GreedyItem(name='banana', weight=27, value=60, efficiency=2.2222222222222223), GreedyItem(name='waterproof overclothes', weight=43, value=75, efficiency=1.744186046511628), GreedyItem(name='waterproof trousers', weight=42, value=70, efficiency=1.6666666666666667), GreedyItem(name='water', weight=153, value=200, efficiency=1.3071895424836601)]
+
+Check exceptional case:
+
+    >>> pack_greedy("exceptional_items.csv")
+    [GreedyItem(name='magic box', weight=390, value=2000, efficiency=5.128205128205129)]
