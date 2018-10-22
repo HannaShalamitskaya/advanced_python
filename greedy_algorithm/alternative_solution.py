@@ -1,5 +1,5 @@
-from itertools import accumulate
 from functools import reduce
+from itertools import accumulate
 from itertools import takewhile
 import os
 
@@ -14,7 +14,7 @@ def pack_greedy(file_name="items.csv"):
     items = get_items(os.path.join(DATA_PATH, file_name))
     solution = items[: len(
         list(takewhile(lambda x: x < MAX_WEIGHT,
-                       accumulate([0] + items, lambda x, y: x+y[1])))) - 1]
+                       accumulate([0] + items, lambda x, y: x + y[1])))) - 1]
 
     return solution
 
