@@ -22,12 +22,10 @@ def pack(greedy_items):
 
 
 def greedy_exceptional_case(items, got_items):
-    """
-    try to cover an exceptional case
-    when value of one item is more then calculated valuable
-    for example add to the items.csv:
-    magic box,390,2000
-    """
+    # try to cover an exceptional case
+    # when value of one item is more then calculated valuable
+    # for example add to the items.csv:
+    #     magic box,390,2000
     value = reduce(lambda a, b: a + b, [i.value for i in got_items])
     exceptional = list(takewhile(
         lambda i: i.value > value and i.weight < MAX_WEIGHT,
