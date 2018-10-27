@@ -1,5 +1,5 @@
-from distutils.core import setup
 from distutils.core import Extension
+from distutils.core import setup
 
 sfc_module = Extension('fibonacci', sources=['fibonacci.cpp'])
 
