@@ -1,0 +1,49 @@
+#include <Python.h>
+#include <Windows.h>
+#include <stdio.h>
+#include <chrono>
+
+
+PyObject* fib_n_items(PyObject *self, PyObject *args) {
+	int n, tmp;
+	int a = 0;
+	int b = 1;
+
+	if (!PyArg_Parse(args, "i", &n))
+    {
+        return NULL;
+    }
+
+    printf("\nC extension\n");
+    auto start = std::chrono::high_resolution_clock::now();
+
+	while (b <= n){
+	    printf("%d ", b);
+
+	    tmp = a;
+	    a = b;
+	    b = tmp + b;
+	};
+	auto finish = std::chrono::high_resolution_clock::now();
+	std::chrono::duration<double> elapsed = finish - start;
+	printf("\nExecution time: %f\n", elapsed.count());
+
+	return Py_None;
+};
+
+static PyMethodDef fibn_methods[] = {
+	{ "fibn", (PyCFunction)fib_n_items, METH_O, nullptr },
+	{ nullptr, nullptr, 0, nullptr }
+};
+
+static PyModuleDef fibonacci_module = {
+	PyModuleDef_HEAD_INIT,
+	"fibonacci",
+	"calculate items of the Fibonacci series",
+	0,
+	fibn_methods
+};
+
+PyMODINIT_FUNC PyInit_fibonacci() {
+	return PyModule_Create(&fibonacci_module);
+}
