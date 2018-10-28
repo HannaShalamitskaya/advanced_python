@@ -1,4 +1,4 @@
-from fibonacci_python import fibn_python
+from python.fibonacci_python import fibn_python
 from timeit import timeit
 
 
