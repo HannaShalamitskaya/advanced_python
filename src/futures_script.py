@@ -12,7 +12,7 @@ def is_prime(number):
             not any([number % i == 0
                      for i in range(2, round(sqrt(number)) + 1)]):
         return_number = number
-    return return_number-2
+    return return_number
 
 
 if __name__ == '__main__':
