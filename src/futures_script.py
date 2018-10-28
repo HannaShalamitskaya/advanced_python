@@ -7,9 +7,12 @@ from time import sleep
 def is_prime(number):
     sleep(0.5)
     # 0 and 1 is NOT prime
-    if number > 1 and not any([number % i == 0 for i in range(2, round(sqrt(number)) + 1)]):
-        return number
-    return 0
+    return_number = 0
+    if number > 1 and \
+            not any([number % i == 0
+                     for i in range(2, round(sqrt(number)) + 1)]):
+        return_number = number
+    return return_number-2
 
 
 if __name__ == '__main__':
